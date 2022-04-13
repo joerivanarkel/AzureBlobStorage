@@ -1,5 +1,5 @@
 ## Azure Blob Storage
-In this example I am creating, fetching and deleting files in a remote Blob Storage container. I have used dotnet secrets to set up a secret connectionstring and I am using the Azure.Storage.Blobs NuGet package.
+In this example I am creating, fetching and deleting files in a remote Blob Storage container. I have used dotnet secrets to set up a secret connectionstring, in Databse.cs it is converted from secret to string. I am using the Azure.Storage.Blobs NuGet package.
 
 ### Setting up Blob Storage
 Here we create a new container in a specified storage account. Using this ``containerclient`` we can create, fetch and delete blobs in this container.
