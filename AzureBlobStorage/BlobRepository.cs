@@ -14,16 +14,13 @@ namespace AzureBlobStorage
         {
             BlobServiceClient blobServiceClient = new BlobServiceClient(DatabaseConnection<Program>.Get());
             string containerName = "huhaaaha";
-            BlobContainerClient containerClient;
             try
             {
-                containerClient = blobServiceClient.CreateBlobContainer(containerName);
-                _containerClient = containerClient;
+                _containerClient = blobServiceClient.CreateBlobContainer(containerName);
             }
             catch
             {
-                containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-                _containerClient = containerClient;
+                _containerClient = blobServiceClient.GetBlobContainerClient(containerName);
             }
         }
 
