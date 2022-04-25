@@ -1,3 +1,4 @@
+[![.NET](https://github.com/joerivanarkel/AzureBlobStorage/actions/workflows/dotnet.yml/badge.svg)](https://github.com/joerivanarkel/AzureBlobStorage/actions/workflows/dotnet.yml)
 ## Azure Blob Storage
 In this example I am creating, fetching and deleting files in a remote Blob Storage container. I have used dotnet secrets to set up a secret connectionstring, in ``DatabaseConnection.cs`` it is converted from secret to string. I am using the Azure.Storage.Blobs NuGet package.
 
