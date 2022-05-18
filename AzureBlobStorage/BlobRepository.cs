@@ -1,5 +1,6 @@
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using UserSecrets;
 
 namespace AzureBlobStorage
 {
@@ -12,7 +13,7 @@ namespace AzureBlobStorage
         }
         public static void GetBlobServiceClient()
         {
-            BlobServiceClient blobServiceClient = new BlobServiceClient(DatabaseConnection<Program>.Get());
+            BlobServiceClient blobServiceClient = new BlobServiceClient(UserSecrets<Program>.GetSecret("connectionstring"));
             string containerName = "huhaaaha";
             try
             {
